@@ -244,6 +244,27 @@
 			</span>
 		</h3>
 	</footer>
+	<script>
+		function darBienvenida(){
+				alert('Bienvenido');
+			}
 
+		function hacerAlgoImportante(){
+				console.log('estoy haciendo algo importante');
+			}
+
+		
+		function atachar(obj, evento, funcion){
+			if (obj.addEventListener){
+				obj.addEventListener(evento, funcion);
+			} else {
+				obj.attachEvent('on'+evento, funcion);
+			}
+		}
+
+		atachar(window, 'load', darBienvenida);
+		atachar(window, 'load', hacerAlgoImportante);
+
+	</script>
 </body>
 </html>
