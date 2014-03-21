@@ -37,6 +37,18 @@
 			<li><a href="#">CSS3</a></li>
 		</ul>
 	</nav>
+
+	<form action="">
+		<p>
+			<label for="titulo">Título</label>
+			<input placeholder="Ingrese el Título" id="titulo" type="text" name="titulo"></p>
+		<p>
+			<label for="autor">Autor</label>
+			<input placeholder="Ingrese el Autor" id="autor" type="text" name="autor"></p>
+		<p>
+			<label for="tag">Tag</label>
+			<input placeholder="Ingrese el Tag" id="tag" type="text" name="tag"></p>
+	</form>
 	
 	<section class="posts">
 		<article class="post">
@@ -246,25 +258,12 @@
 		</h3>
 	</footer>
 	<script>
-		function darBienvenida(){
-				alert('Este botón te servirá para crear un post');
-			}
-
-		function hacerAlgoImportante(){
-				console.log('estoy haciendo algo importante');
-			}
-
-		
 		$(function(){
-			$('.publicar')
-				.on('click', darBienvenida)
-				.on('click', function(){
-				console.log('Me hicieron click');
-			})
-			$(window)
-				.on('load', hacerAlgoImportante);
+			$('.publicar').on('click', mostrarFormulario);
 
-			$('.publicar').off('click', darBienvenida);
+			function mostrarFormulario() {
+				$('form').css('display', 'block');
+			}
 		});
 
 	</script>
