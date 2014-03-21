@@ -247,7 +247,7 @@
 	</footer>
 	<script>
 		function darBienvenida(){
-				alert('Bienvenido');
+				alert('Este botón te servirá para crear un post');
 			}
 
 		function hacerAlgoImportante(){
@@ -256,9 +256,15 @@
 
 		
 		$(function(){
-			$('.publicar').on('click', darBienvenida);
+			$('.publicar')
+				.on('click', darBienvenida)
+				.on('click', function(){
+				console.log('Me hicieron click');
+			})
 			$(window)
 				.on('load', hacerAlgoImportante);
+
+			$('.publicar').off('click', darBienvenida);
 		});
 
 	</script>
